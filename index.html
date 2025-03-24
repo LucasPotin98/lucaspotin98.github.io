@@ -68,5 +68,26 @@
         </section>
         </div>
     </div>
+
+    <!-- Contenu pour mobile -->
+<div id="mobile-content" class="d-lg-none"></div>
+
+<script>
+  async function loadMobileContent() {
+    if (window.innerWidth < 992) {
+      const sections = ['projects.html', 'publications.html'];
+      for (let url of sections) {
+        const response = await fetch(url);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        const content = doc.querySelector('.container');
+        document.getElementById('mobile-content').appendChild(content);
+      }
+    }
+  }
+
+  loadMobileContent();
+</script>
 </body>
 </html>
