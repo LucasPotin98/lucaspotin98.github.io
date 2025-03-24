@@ -70,24 +70,143 @@
     </div>
 
     <!-- Contenu pour mobile -->
-<div id="mobile-content" class="d-lg-none"></div>
+<div class="d-lg-none">
+    <div class="d-lg-none container my-5">
+    <h2 class="text-center mb-4">Mes projets</h2>
+    <p class="text-center mb-5">Petite sélection de projets personnels !</p>
 
-<script>
-  async function loadMobileContent() {
-    if (window.innerWidth < 992) {
-      const sections = ['projects.html', 'publications.html'];
-      for (let url of sections) {
-        const response = await fetch(url);
-        const text = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-        const content = doc.querySelector('.container');
-        document.getElementById('mobile-content').appendChild(content);
-      }
-    }
-  }
+    <div class="row g-4">
 
-  loadMobileContent();
-</script>
+        <!-- Projet 1 -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">BeauAMP Analyzer</h5>
+                    <p class="card-text">
+                        Une application interactive pour explorer les réseaux de marchés publics issus de la base FOPPA.
+                    </p>
+                    <div class="mb-2">
+                        <span class="badge bg-info text-dark">Graph Mining</span>
+                        <span class="badge bg-warning text-dark">Open Data</span>
+                        <span class="badge bg-dark">Marchés publics</span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">Python</span>
+                        <span class="badge bg-success">Streamlit</span>
+                        <span class="badge bg-secondary">networkX</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between">
+                    <a href="" class="btn btn-outline-success btn-sm" target="_blank">Bientôt dispo !</a>
+                    <a href="" class="btn btn-outline-primary btn-sm" target="_blank">Bientôt dispo !</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Prévision de corruption avec sous-graphes fréquents</h5>
+                    <p class="card-text">
+                        Une méthode de classification sur graphes, combinant extraction de motifs fréquents et scoring via mesures de qualité.
+                    </p>
+                    <div class="mb-2">
+                        <span class="badge bg-info text-dark">Graph Classification</span>
+                        <span class="badge bg-warning text-dark">Pattern mining</span>
+                        <span class="badge bg-dark">Explainability</span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">Python</span>
+                        <span class="badge bg-success">SPMF</span>
+                        <span class="badge bg-secondary">Bash</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between">
+                    <a href="https://pangvisualizer-74b7ybb9oyizbabxj9jin7.streamlit.app/" class="btn btn-outline-success btn-sm" target="_blank">Application Streamlit</a>
+                    <a href="https://github.com/CompNet/Pang" class="btn btn-outline-primary btn-sm" target="_blank">Le GitHub de la méthode</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Siretizator</h5>
+                    <p class="card-text">
+                        Outil de désambiguïsation des entités économiques dans les bases de marchés publics.
+                    </p>
+                    <div class="mb-2">
+                        <span class="badge bg-info text-dark">Data Engineering</span>
+                        <span class="badge bg-warning text-dark">Désambiguïsation d’entité nommée</span>
+                        <span class="badge bg-dark">Marchés publics</span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">Python</span>
+                        <span class="badge bg-success">SQL</span>
+                        <span class="badge bg-secondary">Fuzzy matching</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between">
+                    <a href="" class="btn btn-outline-success btn-sm" target="_blank">Bientôt dispo !</a>
+                    <a href="" class="btn btn-outline-primary btn-sm" target="_blank">Bientôt dispo !</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Publications – version mobile -->
+<div class="d-lg-none container my-5">
+    <h2 class="text-center mb-4">Publications</h2>
+    <p class="text-center mb-4">Voici une sélection de mes publications scientifiques récentes.</p>
+
+    <!-- Publication 1 -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">FOPPA: une base ouverte de marchés publics (2010–2020)</h5>
+            <p class="card-text"><strong>Auteurs :</strong> L. Potin, V. Labatut, P.H. Morand, C. Largeron</p>
+            <a href="https://www.nature.com/articles/s41597-023-02213-z" class="btn btn-outline-primary btn-sm" target="_blank">🔗 Lien</a>
+            <a href="https://hal.science/hal-04101350v1/document" class="btn btn-outline-primary btn-sm" target="_blank">📄 PDF</a>
+            <a href="https://github.com/CompNet/FoppaInit" class="btn btn-outline-secondary btn-sm" target="_blank">💻 Code</a>
+        </div>
+    </div>
+
+    <!-- Publication 2 -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">BeauAMP: traitement des données BOAMP (2015–2023)</h5>
+            <p class="card-text"><strong>Auteurs :</strong> A. Deschamps, L. Potin</p>
+            <a href="https://www.sciencedirect.com/science/article/pii/S2352340925000095" class="btn btn-outline-primary btn-sm" target="_blank">🔗 Lien</a>
+            <a href="https://pdf.sciencedirectassets.com/311593/1-s2.0-S2352340924X00074/1-s2.0-S2352340925000095/main.pdf" class="btn btn-outline-primary btn-sm" target="_blank">📄 PDF</a>
+            <a href="https://github.com/AdrienDeschampsAU/BeauAMP" class="btn btn-outline-secondary btn-sm" target="_blank">💻 Code</a>
+        </div>
+    </div>
+
+    <!-- Publication 3 -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Détection d’anomalies dans les graphes</h5>
+            <p class="card-text"><strong>Auteurs :</strong> L. Potin et al.</p>
+            <a href="https://dl.acm.org/doi/10.1007/978-3-031-43427-3_5" class="btn btn-outline-primary btn-sm" target="_blank">🔗 Lien</a>
+            <a href="https://arxiv.org/pdf/2306.10857" class="btn btn-outline-primary btn-sm" target="_blank">📄 PDF</a>
+            <a href="https://github.com/CompNet/Pang" class="btn btn-outline-secondary btn-sm" target="_blank">💻 Code</a>
+        </div>
+    </div>
+
+    <!-- Communication orale -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Conférence ROADEF 2023</h5>
+            <p class="card-text"><strong>Titre :</strong> Utilisation de graphes pour détecter la corruption</p>
+            <a href="https://roadef2023.sciencesconf.org/436926" class="btn btn-outline-primary btn-sm" target="_blank">🔗 Lien</a>
+            <a href="https://hal.science/hal-03994098v1/file/DIAPO_ROADEF_LUCAS.pdf" class="btn btn-outline-primary btn-sm" target="_blank">📄 Slides</a>
+        </div>
+    </div>
+</div>
+
+</div>
 </body>
 </html>
