@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets - Mon Portfolio</title>
+    <title>Lucas Potin - Projets</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Mon Portfolio</a>
+            <a class="navbar-brand" href="index.html">Lucas Potin</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -25,73 +25,105 @@
     <!-- Contenu -->
     <div class="container my-5">
         <h1 class="mb-4 text-center">Mes projets</h1>
-        <p class="text-center mb-5">Voici une sélection de projets personnels ou académiques mettant en valeur mes compétences en data science, graph mining et développement d'outils analytiques.</p>
+        <p class="text-center mb-5">Petite sélection de projets personnels ! </p>
 
         <div class="row g-4">
 
-            <!-- Projet 1 -->
+            <!-- Projet 1 : BeauAMP Analyzer -->
             <div class="col-md-6">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">FOPPA Explorer</h5>
-                        <p class="card-text">Une application interactive permettant d'explorer les réseaux de marchés publics issus de la base FOPPA. Basée sur un moteur de requêtes API et des visualisations réseau.</p>
-                        <span class="badge bg-primary">Graph Mining</span>
-                        <span class="badge bg-secondary">Streamlit</span>
-                        <span class="badge bg-success">Python</span>
+                        <h5 class="card-title">BeauAMP Analyzer</h5>
+                        <p class="card-text">
+                            Une application interactive pour explorer les réseaux de marchés publics issus de la base FOPPA.
+                            Visualisez les graphes contractuels d’une entité publique et identifiez les sous-structures caractéristiques.
+                        </p>
+
+                        <!-- Thématiques / Domaine -->
+                        <div class="mb-2">
+                            <span class="badge bg-info text-dark">Graph Mining</span>
+                            <span class="badge bg-warning text-dark">Open Data</span>
+                            <span class="badge bg-dark">Marchés publics</span>
+                        </div>
+
+                        <!-- Stack technique -->
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">Streamlit</span>
+                            <span class="badge bg-secondary">networkX</span>
+                        </div>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://github.com/lucaspotin98/FOPPA-explorer" class="btn btn-outline-primary btn-sm" target="_blank">Voir sur GitHub</a>
+
+                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                        <a href="" class="btn btn-outline-success btn-sm" target="_blank">Bientôt dispo !</a>
+                        <a href="https://github.com/LucasPotin98/BeauAMP_Analyzer" class="btn btn-outline-primary btn-sm" target="_blank">Bientôt dispo !</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Projet 2 -->
+            <!-- Projet 2 : BeauAMP Analyzer -->
             <div class="col-md-6">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Prévision de corruption avec sous-graphes fréquents</h5>
-                        <p class="card-text">Une méthode de classification sur graphes, combinant extraction de motifs fréquents et scoring via mesures de qualité. Codée dans le cadre de ma thèse.</p>
-                        <span class="badge bg-primary">Graph Classification</span>
-                        <span class="badge bg-dark">Pattern Mining</span>
-                        <span class="badge bg-success">Python</span>
+                        <h5 class="card-title">Prévision de corruption avec sous-graphes fréquent</h5>
+                        <p class="card-text">
+                            Une méthode de classification sur graphes, combinant extraction de motifs fréquents et scoring via mesures de qualité. Codée dans le cadre de ma thèse.
+                        </p>
+
+                        <!-- Thématiques / Domaine -->
+                        <div class="mb-2">
+                            <span class="badge bg-info text-dark">Graph Classification</span>
+                            <span class="badge bg-warning text-dark">Pattern mining</span>
+                            <span class="badge bg-dark">Explainability</span>
+                        </div>
+
+                        <!-- Stack technique -->
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">SPMF</span>
+                            <span class="badge bg-secondary">Bash</span>
+                        </div>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://github.com/CompNet/Pang" class="btn btn-outline-primary btn-sm" target="_blank">Voir le code</a>
+
+                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                        <a href="https://beaucoup.streamlit.app" class="btn btn-outline-success btn-sm" target="_blank">Application Streamlit</a>
+                        <a href="https://github.com/CompNet/Pang" class="btn btn-outline-primary btn-sm" target="_blank">Le GitHub de la méthode</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Projet 3 -->
+            <!-- Projet 3 : Siretizator -->
             <div class="col-md-6">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Analyse de jeu au tennis (projet fun)</h5>
-                        <p class="card-text">Projet personnel utilisant des vidéos GoPro pour analyser ma technique, mes trajectoires et ma stratégie sur le court.</p>
-                        <span class="badge bg-warning text-dark">Computer Vision</span>
-                        <span class="badge bg-info text-dark">OpenCV</span>
-                        <span class="badge bg-success">Python</span>
+                        <h5 class="card-title">Siretizator</h5>
+                        <p class="card-text">
+                            Un outil de désambiguïsation des entités économiques dans les bases de marchés publics.
+                            Il associe à chaque agent un SIRET unique en combinant nettoyage d’adresses, normalisation de noms et appariement intelligent.
+                        </p>
+
+                        <!-- Thématiques / Domaine -->
+                        <div class="mb-2">
+                            <span class="badge bg-info text-dark">Data Engineering</span>
+                            <span class="badge bg-warning text-dark">Désambiguïsation d’entité nommée</span>
+                            <span class="badge bg-dark">Marchés publics</span>
+                        </div>
+
+                        <!-- Stack technique -->
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">SQL</span>
+                            <span class="badge bg-secondary">Fuzzy matching</span>
+                        </div>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="#" class="btn btn-outline-primary btn-sm disabled">Bientôt dispo</a>
+
+                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                        <a href="" class="btn btn-outline-success btn-sm" target="_blank">Bientôt dispo !</a>
+                        <a href="" class="btn btn-outline-primary btn-sm" target="_blank">Bientôt dispo !</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Projet 4 -->
-            <div class="col-md-6">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Analyse de compétitions de bridge</h5>
-                        <p class="card-text">Exploration des résultats de tournois de bridge, avec détection d’anomalies et visualisation des distributions de scores.</p>
-                        <span class="badge bg-info text-dark">Exploratory Analysis</span>
-                        <span class="badge bg-success">Pandas</span>
-                        <span class="badge bg-secondary">Matplotlib</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="#" class="btn btn-outline-primary btn-sm disabled">Bientôt en ligne</a>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
