@@ -8,11 +8,15 @@
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar responsive -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Lucas Potin</a>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link active" href="projects.html">Projets</a></li>
@@ -25,35 +29,29 @@
     <!-- Contenu -->
     <div class="container my-5">
         <h1 class="mb-4 text-center">Mes projets</h1>
-        <p class="text-center mb-5">Petite sélection de projets personnels ! </p>
+        <p class="text-center mb-5">Petite sélection de projets personnels !</p>
 
         <div class="row g-4">
 
-
-            <!-- Projet 2 : BeauAMP Analyzer -->
+            <!-- Projet 1 -->
             <div class="col-md-6">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Prévision de corruption avec sous-graphes fréquent</h5>
+                        <h5 class="card-title">Prévision de corruption avec sous-graphes fréquents</h5>
                         <p class="card-text">
                             Une méthode de classification sur graphes, combinant extraction de motifs fréquents et scoring via mesures de qualité. Codée dans le cadre de ma thèse.
                         </p>
-
-                        <!-- Thématiques / Domaine -->
                         <div class="mb-2">
                             <span class="badge bg-info text-dark">Graph Classification</span>
                             <span class="badge bg-warning text-dark">Pattern mining</span>
                             <span class="badge bg-dark">Explainability</span>
                         </div>
-
-                        <!-- Stack technique -->
                         <div class="mb-3">
                             <span class="badge bg-primary">Python</span>
                             <span class="badge bg-success">SPMF</span>
                             <span class="badge bg-secondary">Bash</span>
                         </div>
                     </div>
-
                     <div class="card-footer bg-transparent d-flex justify-content-between">
                         <a href="https://pangvisualizer-74b7ybb9oyizbabxj9jin7.streamlit.app/" class="btn btn-outline-success btn-sm" target="_blank">Application Streamlit</a>
                         <a href="https://github.com/CompNet/Pang" class="btn btn-outline-primary btn-sm" target="_blank">GitHub</a>
@@ -61,24 +59,19 @@
                 </div>
             </div>
 
-             <!-- Projet 3 : Prediction Ventes -->
-             <div class="col-md-6">
+            <!-- Projet 2 -->
+            <div class="col-md-6">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Prédiction des ventes -- Retail</h5>
+                        <h5 class="card-title">Prédiction des ventes – Retail</h5>
                         <p class="card-text">
-                            Une application interactive de prévision des ventes hebdomadaires par famille de produits (Shirt, Hoodie, Activewear), construite avec Prophet, XGBoost et un modèle naïf.
-                            Elle inclut également une analyse complémentaire en graphe des relations entre produits.
+                            Application interactive de prévision hebdomadaire par famille de produits (Shirt, Hoodie, Activewear), avec Prophet, XGBoost et un modèle naïf.
                         </p>
-
-                        <!-- Thématiques / Domaine -->
                         <div class="mb-2">
                             <span class="badge bg-info text-dark">Time Series</span>
                             <span class="badge bg-warning text-dark">Sales Forecasting</span>
                             <span class="badge bg-dark">Graph Analysis</span>
                         </div>
-
-                        <!-- Stack technique -->
                         <div class="mb-3">
                             <span class="badge bg-primary">Python</span>
                             <span class="badge bg-success">Streamlit</span>
@@ -86,50 +79,44 @@
                             <span class="badge bg-secondary">XGBoost</span>
                         </div>
                     </div>
-
                     <div class="card-footer bg-transparent d-flex justify-content-between">
                         <a href="https://sales-prediction-dashboard.streamlit.app/" class="btn btn-outline-success btn-sm" target="_blank">Application Streamlit</a>
                         <a href="https://github.com/LucasPotin98/sales-prediction-dashboard/" class="btn btn-outline-primary btn-sm" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Projet 3 : Siretizator -->
+
+            <!-- Projet 3 -->
             <div class="col-md-6">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h5 class="card-title">Siretizator</h5>
                         <p class="card-text">
-                            Un outil de désambiguïsation des entités économiques dans les bases de marchés publics.
-                            Il associe à chaque agent un SIRET unique en combinant nettoyage d’adresses, normalisation de noms et appariement intelligent.
+                            Outil de désambiguïsation des entités dans les données de marchés publics. Il associe à chaque agent un SIRET unique via normalisation et appariement intelligent.
                         </p>
-
-                        <!-- Thématiques / Domaine -->
                         <div class="mb-2">
                             <span class="badge bg-info text-dark">Data Engineering</span>
-                            <span class="badge bg-warning text-dark">Désambiguïsation d’entité nommée</span>
+                            <span class="badge bg-warning text-dark">Désambiguïsation</span>
                             <span class="badge bg-dark">Marchés publics</span>
                         </div>
-
-                        <!-- Stack technique -->
                         <div class="mb-3">
                             <span class="badge bg-primary">Python</span>
                             <span class="badge bg-success">FastAPI</span>
                             <span class="badge bg-secondary">Fuzzy matching</span>
                         </div>
                     </div>
-
-                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                    <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap">
                         <a href="https://siretizator.onrender.com/" class="btn btn-outline-success btn-sm" target="_blank">API Render</a>
-                         <a href="https://github.com/LucasPotin98/Siretizator_Lite/tree/main" class="btn btn-outline-primary btn-sm" target="_blank">GitHub API</a>
+                        <a href="https://github.com/LucasPotin98/Siretizator_Lite/tree/main" class="btn btn-outline-primary btn-sm" target="_blank">GitHub API</a>
                         <a href="https://github.com/LucasPotin98/Siretizator/tree/main" class="btn btn-outline-primary btn-sm" target="_blank">GitHub Local</a>
                     </div>
                 </div>
             </div>
 
-
         </div>
     </div>
 
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
