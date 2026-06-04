@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Lucas Potin, data scientist docteur en data mining, spécialisé en graph mining, apprentissage automatique, données publiques et détection de fraude.">
+    <meta name="description" content="Lucas Potin, Data Scientist et docteur en data mining spécialisé en graph analysis, anomaly detection et public procurement data. Portfolio, projets et publications.">
+    <meta name="keywords" content="Lucas Potin, Data Scientist, Docteur, PhD, data mining, graph analysis, anomaly detection, public procurement data, graph mining">
+    <meta property="og:title" content="Lucas Potin | Data Scientist, PhD in Data Mining">
+    <meta property="og:description" content="Portfolio de Lucas Potin: data science, graph analysis, anomaly detection et public procurement data.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Photo_Lucas.jpeg">
     <meta name="google-site-verification" content="HN5MiPjLOTcwa0yqPHhh7JO3KlF8MF3IjVjF0bjUhV0">
-    <title>Lucas Potin | Data Scientist</title>
+    <title>Lucas Potin | Data Scientist & Docteur en Data Mining</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,7 +43,7 @@
                 <p class="eyebrow">Data science appliquée, graphes et données publiques</p>
                 <h1>Transformer des données complexes en modèles utiles, lisibles et actionnables.</h1>
                 <p class="hero-text">
-                    Je suis Lucas Potin, docteur en data mining. Je travaille sur l'analyse de graphes, la fouille de données, l'apprentissage automatique et la détection de comportements atypiques, avec un ancrage fort dans les usages concrets.
+                    Je suis Lucas Potin, Data Scientist et docteur en data mining, spécialisé en analyse de graphes, détection d'anomalies et données publiques, notamment appliquées aux marchés publics.
                 </p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="#projects">Voir les projets</a>
@@ -84,7 +89,7 @@
                     Ingénieur en mathématiques appliquées à l'INSA Rouen avec un double diplôme en data science, j'ai orienté mon parcours vers les usages concrets des données et des modèles.
                 </p>
                 <p>
-                    Ma thèse au Laboratoire Informatique d'Avignon m'a plongé dans les graphes et les données publiques, avec un focus sur la détection de comportements atypiques dans les marchés publics. J'y ai développé un framework interprétable pour la classification de graphes, en lien direct avec les enjeux de transparence et de gouvernance.
+                    Mon doctorat au Laboratoire Informatique d'Avignon a porté sur l'analyse de graphes et les données publiques, avec un focus sur la détection de comportements atypiques dans les marchés publics. J'y ai développé des méthodes interprétables pour la classification de graphes et la détection d'anomalies, en lien direct avec les enjeux de transparence et de gouvernance.
                 </p>
                 <p>
                     Expériences en entreprise, recherche internationale en Écosse et encadrement d'étudiants m'ont donné une approche polyvalente: rigueur scientifique, attention aux données, et sens du déploiement utile.
@@ -110,7 +115,14 @@
                 <article class="work-card">
                     <div class="card-meta">Graph mining | Streamlit</div>
                     <h3>DramaPang</h3>
-                    <p>Application de classification de pièces de théâtre en comédies ou tragédies à partir des réseaux de personnages et de motifs discriminants.</p>
+                    <dl class="project-details">
+                        <dt>Problème</dt>
+                        <dd>Classifier des pièces de théâtre à partir de leur structure relationnelle, au-delà du seul texte.</dd>
+                        <dt>Méthode</dt>
+                        <dd>Construction de réseaux de personnages et extraction de motifs discriminants pour produire une prédiction interprétable.</dd>
+                        <dt>Livrable</dt>
+                        <dd>Application Streamlit de démonstration et code source disponibles en ligne.</dd>
+                    </dl>
                     <div class="tags">
                         <span>Python</span>
                         <span>NetworkX</span>
@@ -125,7 +137,14 @@
                 <article class="work-card">
                     <div class="card-meta">Time series | Dashboard</div>
                     <h3>Prédiction des ventes retail</h3>
-                    <p>Dashboard interactif de prévision hebdomadaire par famille de produits, comparant Prophet, XGBoost et un modèle de référence.</p>
+                    <dl class="project-details">
+                        <dt>Problème</dt>
+                        <dd>Explorer la prévision hebdomadaire des ventes par famille de produits retail.</dd>
+                        <dt>Méthode</dt>
+                        <dd>Comparaison de modèles de séries temporelles et de machine learning, dont Prophet, XGBoost et un modèle de référence.</dd>
+                        <dt>Livrable</dt>
+                        <dd>Dashboard Streamlit interactif pour visualiser les prévisions et comparer les approches.</dd>
+                    </dl>
                     <div class="tags">
                         <span>Prophet</span>
                         <span>XGBoost</span>
@@ -140,7 +159,14 @@
                 <article class="work-card">
                     <div class="card-meta">Data engineering | API</div>
                     <h3>Siretizator</h3>
-                    <p>Outil de désambiguïsation d'entités dans les données de marchés publics, associant les agents à un SIRET unique par normalisation et appariement.</p>
+                    <dl class="project-details">
+                        <dt>Problème</dt>
+                        <dd>Réconcilier des noms d'acteurs publics ou privés décrits de manière hétérogène dans les données de marchés publics.</dd>
+                        <dt>Méthode</dt>
+                        <dd>Normalisation des champs, appariement approximatif et exposition d'une API pour associer les agents à un SIRET unique.</dd>
+                        <dt>Livrable</dt>
+                        <dd>API déployée et dépôts GitHub pour les versions locale et légère.</dd>
+                    </dl>
                     <div class="tags">
                         <span>FastAPI</span>
                         <span>Fuzzy matching</span>
@@ -166,7 +192,8 @@
                     <span>2025</span>
                     <div>
                         <h3>Processing and consolidation of open data on public procurement in France (2015-2023)</h3>
-                        <p>A. Deschamps, L. Potin</p>
+                        <p class="publication-summary">Article de données consacré à la constitution de BeauAMP, une base tabulaire issue d'avis de marchés publics français publiés en ligne entre 2015 et 2023. Le jeu de données consolide environ un million de relations contractuelles et documente les contrats, les acheteurs publics et les entreprises attributaires.</p>
+                        <p><strong>Auteurs :</strong> A. Deschamps, L. Potin</p>
                         <a href="https://www.sciencedirect.com/science/article/pii/S2352340925000095" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://github.com/AdrienDeschampsAU/BeauAMP" target="_blank" rel="noreferrer">Code</a>
                     </div>
@@ -175,7 +202,8 @@
                     <span>2025</span>
                     <div>
                         <h3>Pattern-Based Graph Classification: Comparison of Quality Measures and Importance of Preprocessing</h3>
-                        <p>L. Potin, R. Figueiredo, V. Labatut, C. Largeron</p>
+                        <p class="publication-summary">Article de graph classification qui compare 38 mesures de qualité utilisées pour sélectionner des motifs discriminants. Il propose aussi un prétraitement par clustering pour réduire les motifs à traiter tout en conservant une performance comparable et une meilleure lisibilité.</p>
+                        <p><strong>Auteurs :</strong> L. Potin, R. Figueiredo, V. Labatut, C. Largeron</p>
                         <a href="https://dl.acm.org/doi/10.1145/3743143" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://github.com/CompNet/gpQualMeasComp" target="_blank" rel="noreferrer">Code</a>
                     </div>
@@ -184,7 +212,8 @@
                     <span>2023</span>
                     <div>
                         <h3>FOPPA: an open database of French public procurement award notices from 2010-2020</h3>
-                        <p>L. Potin, V. Labatut, P.H. Morand, C. Largeron</p>
+                        <p class="publication-summary">Article de données présentant FOPPA, une base ouverte d'avis d'attribution de marchés publics français issus de TED sur la période 2010-2020. Le travail décrit les problèmes de qualité des données brutes et les traitements automatisés ou semi-automatisés utilisés pour produire une base exploitable.</p>
+                        <p><strong>Auteurs :</strong> L. Potin, V. Labatut, P.H. Morand, C. Largeron</p>
                         <a href="https://www.nature.com/articles/s41597-023-02213-z" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://hal.science/hal-04101350v1/document" target="_blank" rel="noreferrer">PDF</a>
                         <a href="https://github.com/CompNet/FoppaInit" target="_blank" rel="noreferrer">Code</a>
@@ -194,7 +223,8 @@
                     <span>2023</span>
                     <div>
                         <h3>Pattern mining for anomaly detection in graphs: Application to fraud in public procurement</h3>
-                        <p>L. Potin, R. Figueiredo, V. Labatut, C. Largeron</p>
+                        <p class="publication-summary">Article proposant PANG, un framework supervisé et interprétable de détection d'anomalies dans des graphes attribués par extraction de motifs. L'application aux marchés publics vise à compenser les attributs manquants en exploitant les relations entre contrats et à identifier des motifs associés à des situations à risque.</p>
+                        <p><strong>Auteurs :</strong> L. Potin, R. Figueiredo, V. Labatut, C. Largeron</p>
                         <a href="https://dl.acm.org/doi/10.1007/978-3-031-43427-3_5" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://arxiv.org/pdf/2306.10857" target="_blank" rel="noreferrer">PDF</a>
                         <a href="https://github.com/CompNet/Pang/tree/main" target="_blank" rel="noreferrer">Code</a>
@@ -219,6 +249,7 @@
                 <h2>Discutons data science, graphes ou R&D appliquée.</h2>
             </div>
             <div class="contact-actions">
+                <a class="button button-primary" href="mailto:lucas.potin.data@gmail.com">Email</a>
                 <a class="button button-primary" href="https://www.linkedin.com/in/lucas-potin/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a class="button button-secondary" href="CV_POTIN_ENG.pdf" target="_blank" rel="noreferrer">CV anglais</a>
                 <a class="button button-secondary" href="https://github.com/LucasPotin98" target="_blank" rel="noreferrer">GitHub</a>

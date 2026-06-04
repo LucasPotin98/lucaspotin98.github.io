@@ -349,12 +349,28 @@ h3 {
 .work-card {
     display: flex;
     flex-direction: column;
-    min-height: 360px;
+    min-height: 500px;
     padding: 22px;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 8px;
     box-shadow: 0 14px 36px rgba(47, 47, 47, 0.07);
+}
+
+.project-details {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0;
+}
+
+.project-details dt {
+    color: var(--cognac);
+    font-weight: 900;
+}
+
+.project-details dd {
+    margin: -0.3rem 0 0.45rem;
+    color: var(--muted);
 }
 
 .card-meta {
