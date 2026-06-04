@@ -1,7 +1,8 @@
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
-const graphCanvas = document.querySelector("[data-graph-canvas]");
+const focusGraph = document.querySelector(".focus-graph");
+const graphNodes = document.querySelectorAll(".graph-node");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (header && navToggle) {
@@ -18,89 +19,43 @@ if (header && navToggle) {
     });
 }
 
-if (graphCanvas && !reducedMotion.matches) {
-    const context = graphCanvas.getContext("2d");
-    const nodes = [];
-    const nodeCount = 22;
-    let animationFrame;
-    let width = 0;
-    let height = 0;
-
-    const createNodes = () => {
-        nodes.length = 0;
-
-        for (let index = 0; index < nodeCount; index += 1) {
-            nodes.push({
-                x: Math.random() * width,
-                y: Math.random() * height,
-                vx: (Math.random() - 0.5) * 0.18,
-                vy: (Math.random() - 0.5) * 0.18,
-                radius: 2 + Math.random() * 2.3
-            });
-        }
+if (focusGraph && graphNodes.length > 0) {
+    const linkMap = {
+        lucas: ["link-lucas-data", "link-lucas-forecasting", "link-lucas-analytics", "link-lucas-ml", "link-lucas-public", "link-lucas-graph", "link-lucas-tennis"],
+        data: ["link-lucas-data", "link-data-analytics", "link-data-ml"],
+        forecasting: ["link-lucas-forecasting", "link-forecasting-analytics"],
+        analytics: ["link-lucas-analytics", "link-data-analytics", "link-forecasting-analytics"],
+        ml: ["link-lucas-ml", "link-data-ml"],
+        public: ["link-lucas-public", "link-public-graph"],
+        graph: ["link-lucas-graph", "link-public-graph"],
+        tennis: ["link-lucas-tennis"]
     };
 
-    const resizeCanvas = () => {
-        const rect = graphCanvas.getBoundingClientRect();
-        const ratio = window.devicePixelRatio || 1;
-
-        width = rect.width;
-        height = rect.height;
-        graphCanvas.width = Math.max(1, Math.floor(width * ratio));
-        graphCanvas.height = Math.max(1, Math.floor(height * ratio));
-        context.setTransform(ratio, 0, 0, ratio, 0, 0);
-        createNodes();
+    const clearGraphState = () => {
+        focusGraph.classList.remove("has-active");
+        focusGraph.querySelectorAll(".is-active").forEach((item) => item.classList.remove("is-active"));
     };
 
-    const draw = () => {
-        context.clearRect(0, 0, width, height);
+    const setGraphState = (node) => {
+        clearGraphState();
+        const key = node.dataset.node;
+        const links = linkMap[key] || [];
 
-        nodes.forEach((node, index) => {
-            node.x += node.vx;
-            node.y += node.vy;
-
-            if (node.x < 0 || node.x > width) {
-                node.vx *= -1;
-            }
-
-            if (node.y < 0 || node.y > height) {
-                node.vy *= -1;
-            }
-
-            for (let targetIndex = index + 1; targetIndex < nodes.length; targetIndex += 1) {
-                const target = nodes[targetIndex];
-                const dx = node.x - target.x;
-                const dy = node.y - target.y;
-                const distance = Math.hypot(dx, dy);
-
-                if (distance < 145) {
-                    context.beginPath();
-                    context.moveTo(node.x, node.y);
-                    context.lineTo(target.x, target.y);
-                    context.strokeStyle = `rgba(38, 70, 83, ${0.16 * (1 - distance / 145)})`;
-                    context.lineWidth = 1;
-                    context.stroke();
-                }
-            }
+        focusGraph.classList.add("has-active");
+        node.classList.add("is-active");
+        links.forEach((linkClass) => {
+            focusGraph.querySelectorAll(`.${linkClass}`).forEach((link) => link.classList.add("is-active"));
         });
-
-        nodes.forEach((node, index) => {
-            context.beginPath();
-            context.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-            context.fillStyle = index % 7 === 0 ? "rgba(182, 122, 45, 0.72)" : "rgba(38, 70, 83, 0.74)";
-            context.fill();
-        });
-
-        animationFrame = window.requestAnimationFrame(draw);
     };
 
-    resizeCanvas();
-    draw();
-    window.addEventListener("resize", resizeCanvas);
-
-    reducedMotion.addEventListener("change", (event) => {
-        if (event.matches && animationFrame) {
-            window.cancelAnimationFrame(animationFrame);
-        }
+    graphNodes.forEach((node) => {
+        node.addEventListener("mouseenter", () => setGraphState(node));
+        node.addEventListener("focus", () => setGraphState(node));
+        node.addEventListener("mouseleave", clearGraphState);
+        node.addEventListener("blur", clearGraphState);
     });
+}
+
+if (reducedMotion.matches) {
+    document.documentElement.classList.add("reduced-motion");
 }
