@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lucas Potin, Data Scientist et docteur en data mining spécialisé en graph analysis, anomaly detection et public procurement data. Portfolio, projets et publications.">
-    <meta name="keywords" content="Lucas Potin, Data Scientist, Docteur, PhD, data mining, graph analysis, anomaly detection, public procurement data, graph mining">
+    <meta name="description" content="Lucas Potin, Data Scientist et docteur en data mining spécialisé en graph mining, anomaly detection et public procurement data. Portfolio de projets, publications et recherche appliquée.">
+    <meta name="keywords" content="Lucas Potin, Data Scientist, PhD, Docteur, data mining, graph mining, graph analysis, anomaly detection, public procurement data, machine learning">
     <meta property="og:title" content="Lucas Potin | Data Scientist, PhD in Data Mining">
-    <meta property="og:description" content="Portfolio de Lucas Potin: data science, graph analysis, anomaly detection et public procurement data.">
+    <meta property="og:description" content="Portfolio de Lucas Potin: graph mining, anomaly detection, public procurement data et data science appliquée.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="Photo_Lucas.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lucas Potin | Data Scientist, PhD in Data Mining">
+    <meta name="twitter:description" content="Graph mining, anomaly detection, public procurement data et data science appliquée.">
     <meta name="google-site-verification" content="HN5MiPjLOTcwa0yqPHhh7JO3KlF8MF3IjVjF0bjUhV0">
     <title>Lucas Potin | Data Scientist & Docteur en Data Mining</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +32,8 @@
             <span class="sr-only">Menu</span>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-            <a href="#expertise">Expertise</a>
+            <a href="#expertise">À propos</a>
+            <a href="#journey">Parcours</a>
             <a href="#projects">Projets</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
@@ -39,22 +43,29 @@
 
     <main id="top">
         <section class="hero section">
+            <canvas class="graph-canvas" data-graph-canvas aria-hidden="true"></canvas>
             <div class="hero-copy">
-                <p class="eyebrow">Data science appliquée, graphes et données publiques</p>
-                <h1>Transformer des données complexes en modèles utiles, lisibles et actionnables.</h1>
+                <p class="eyebrow">Graph analytics, machine learning, données publiques</p>
+                <h1>J'utilise les graphes et le machine learning pour révéler les structures cachées dans les données complexes.</h1>
                 <p class="hero-text">
-                    Je suis Lucas Potin, Data Scientist et docteur en data mining, spécialisé en analyse de graphes, détection d'anomalies et données publiques, notamment appliquées aux marchés publics.
+                    Je suis Lucas Potin, Data Scientist et docteur en data mining, spécialisé en analyse de graphes, détection d'anomalies et données de marchés publics.
                 </p>
+                <div class="hero-tags" aria-label="Expertises clés">
+                    <span>PhD / Docteur</span>
+                    <span>Graph analysis</span>
+                    <span>Anomaly detection</span>
+                    <span>Public procurement data</span>
+                </div>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">Voir les projets</a>
-                    <a class="button button-secondary" href="CV_Lucas_POTIN.pdf" target="_blank" rel="noreferrer">Télécharger le CV</a>
+                    <a class="button button-primary" href="#projects">Explorer les projets</a>
+                    <a class="button button-secondary" href="CV_Lucas_POTIN.pdf" target="_blank" rel="noreferrer">CV français</a>
                 </div>
             </div>
             <aside class="profile-panel" aria-label="Profil Lucas Potin">
                 <img src="Photo_Lucas.jpeg" alt="Portrait de Lucas Potin" class="profile-photo">
                 <div>
                     <p class="profile-name">Lucas Potin</p>
-                    <p class="profile-role">Data Scientist | PhD</p>
+                    <p class="profile-role">Data Scientist | PhD en data mining</p>
                 </div>
                 <div class="profile-links">
                     <a href="https://github.com/LucasPotin98" target="_blank" rel="noreferrer">GitHub</a>
@@ -67,34 +78,68 @@
         <section class="section stats-strip" aria-label="Domaines de travail">
             <article>
                 <strong>Graph mining</strong>
-                <span>Classification, motifs discriminants, détection d'anomalies.</span>
+                <span>Motifs, réseaux, classification et explication.</span>
             </article>
             <article>
-                <strong>Data engineering</strong>
-                <span>Structuration, consolidation et qualité de données publiques.</span>
+                <strong>Anomaly detection</strong>
+                <span>Signaux faibles, comportements atypiques, risques.</span>
             </article>
             <article>
-                <strong>Machine learning</strong>
-                <span>Modèles interprétables, évaluation, mise en application.</span>
+                <strong>Public procurement data</strong>
+                <span>Données publiques complexes, qualité et consolidation.</span>
             </article>
         </section>
 
-        <section class="section split" id="expertise">
+        <section class="section split narrative-section" id="expertise">
             <div>
                 <p class="eyebrow">À propos</p>
-                <h2>Un profil recherche appliquée, construit pour passer du papier au terrain.</h2>
+                <h2>Passer du papier au terrain, sans perdre l'interprétabilité.</h2>
             </div>
-            <div class="prose">
+            <div class="prose node-prose">
                 <p>
-                    Ingénieur en mathématiques appliquées à l'INSA Rouen avec un double diplôme en data science, j'ai orienté mon parcours vers les usages concrets des données et des modèles.
+                    Mon travail part souvent d'une question simple: quelles relations, quels motifs et quelles trajectoires se cachent derrière un jeu de données apparemment tabulaire? Les graphes m'aident à représenter ces systèmes complexes, puis à construire des modèles utiles, lisibles et actionnables.
                 </p>
                 <p>
-                    Mon doctorat au Laboratoire Informatique d'Avignon a porté sur l'analyse de graphes et les données publiques, avec un focus sur la détection de comportements atypiques dans les marchés publics. J'y ai développé des méthodes interprétables pour la classification de graphes et la détection d'anomalies, en lien direct avec les enjeux de transparence et de gouvernance.
+                    Ingénieur en mathématiques appliquées à l'INSA Rouen, diplômé en data science et docteur en data mining, j'ai développé au Laboratoire Informatique d'Avignon des méthodes interprétables pour la classification de graphes et la détection d'anomalies dans les marchés publics.
                 </p>
                 <p>
-                    Expériences en entreprise, recherche internationale en Écosse et encadrement d'étudiants m'ont donné une approche polyvalente: rigueur scientifique, attention aux données, et sens du déploiement utile.
+                    Cette approche reste très appliquée: comprendre les données, documenter leurs limites, rendre les résultats discutables, puis transformer un prototype de recherche en outil exploitable. Côté personnel, le tennis compétitif nourrit le même goût pour les trajectoires, l'ajustement fin et la stratégie, avec une place volontairement discrète ici.
                 </p>
             </div>
+        </section>
+
+        <section class="section journey-section" id="journey">
+            <div class="section-heading">
+                <p class="eyebrow">Journey</p>
+                <h2>Une trajectoire entre mathématiques, graphes et données publiques.</h2>
+            </div>
+            <ol class="journey-track" aria-label="Parcours de Lucas Potin">
+                <li>
+                    <span class="journey-node"></span>
+                    <strong>INSA Rouen</strong>
+                    <p>Applied Mathematics, bases quantitatives et modélisation.</p>
+                </li>
+                <li>
+                    <span class="journey-node"></span>
+                    <strong>MSc / Data Science</strong>
+                    <p>Machine learning, fouille de données et passage aux cas d'usage.</p>
+                </li>
+                <li>
+                    <span class="journey-node"></span>
+                    <strong>PhD / graph mining</strong>
+                    <p>Motifs de graphes, classification et méthodes interprétables.</p>
+                </li>
+                <li>
+                    <span class="journey-node"></span>
+                    <strong>Research / public procurement data</strong>
+                    <p>Consolidation, qualité et analyse des données de marchés publics.</p>
+                </li>
+                <li>
+                    <span class="journey-node tennis-node" aria-label="Clin d'œil tennis"></span>
+                    <strong>Data Scientist</strong>
+                    <p>Des modèles robustes, compréhensibles et reliés aux décisions terrain.</p>
+                </li>
+            </ol>
         </section>
 
         <section class="section stack-section">
@@ -105,28 +150,60 @@
             <img src="stack_technique.png" alt="Stack technique de Lucas Potin" class="stack-image">
         </section>
 
+        <section class="section numbers-section" id="numbers">
+            <div class="section-heading">
+                <p class="eyebrow">By the numbers</p>
+                <h2>Quelques repères, sans surjouer les chiffres.</h2>
+            </div>
+            <div class="number-grid">
+                <article>
+                    <strong>Doctorat soutenu</strong>
+                    <span>PhD en data mining</span>
+                </article>
+                <article>
+                    <strong>4</strong>
+                    <span>articles scientifiques listés</span>
+                </article>
+                <article>
+                    <strong>3</strong>
+                    <span>projets open-source ou apps présentés</span>
+                </article>
+                <article>
+                    <strong>Plusieurs années</strong>
+                    <span>sur les graphes et les données de marchés publics</span>
+                </article>
+                <article>
+                    <strong>15/1</strong>
+                    <span>meilleur classement tennis</span>
+                </article>
+            </div>
+        </section>
+
         <section class="section" id="projects">
             <div class="section-heading">
-                <p class="eyebrow">Selection</p>
-                <h2>Projets</h2>
-                <p>Des applications et outils qui rendent visibles les modèles, les données et leurs limites.</p>
+                <p class="eyebrow">Projects</p>
+                <h2>Des prototypes lisibles, pensés comme des points d'entrée vers les données.</h2>
+                <p>Chaque projet relie un problème concret, une méthode et un livrable inspectable.</p>
             </div>
             <div class="card-grid">
-                <article class="work-card">
+                <article class="work-card featured-card">
+                    <div class="mini-graph" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
                     <div class="card-meta">Graph mining | Streamlit</div>
                     <h3>DramaPang</h3>
                     <dl class="project-details">
-                        <dt>Problème</dt>
+                        <dt>Problem</dt>
                         <dd>Classifier des pièces de théâtre à partir de leur structure relationnelle, au-delà du seul texte.</dd>
-                        <dt>Méthode</dt>
+                        <dt>Method</dt>
                         <dd>Construction de réseaux de personnages et extraction de motifs discriminants pour produire une prédiction interprétable.</dd>
-                        <dt>Livrable</dt>
+                        <dt>Output</dt>
                         <dd>Application Streamlit de démonstration et code source disponibles en ligne.</dd>
                     </dl>
                     <div class="tags">
-                        <span>Python</span>
+                        <span>graph mining</span>
                         <span>NetworkX</span>
-                        <span>Interpretable ML</span>
+                        <span>interpretable ML</span>
                     </div>
                     <div class="card-actions">
                         <a href="https://dramapang.streamlit.app/" target="_blank" rel="noreferrer">Application</a>
@@ -138,17 +215,17 @@
                     <div class="card-meta">Time series | Dashboard</div>
                     <h3>Prédiction des ventes retail</h3>
                     <dl class="project-details">
-                        <dt>Problème</dt>
+                        <dt>Problem</dt>
                         <dd>Explorer la prévision hebdomadaire des ventes par famille de produits retail.</dd>
-                        <dt>Méthode</dt>
+                        <dt>Method</dt>
                         <dd>Comparaison de modèles de séries temporelles et de machine learning, dont Prophet, XGBoost et un modèle de référence.</dd>
-                        <dt>Livrable</dt>
+                        <dt>Output</dt>
                         <dd>Dashboard Streamlit interactif pour visualiser les prévisions et comparer les approches.</dd>
                     </dl>
                     <div class="tags">
+                        <span>forecasting</span>
                         <span>Prophet</span>
                         <span>XGBoost</span>
-                        <span>Streamlit</span>
                     </div>
                     <div class="card-actions">
                         <a href="https://sales-prediction-dashboard.streamlit.app/" target="_blank" rel="noreferrer">Application</a>
@@ -160,17 +237,17 @@
                     <div class="card-meta">Data engineering | API</div>
                     <h3>Siretizator</h3>
                     <dl class="project-details">
-                        <dt>Problème</dt>
+                        <dt>Problem</dt>
                         <dd>Réconcilier des noms d'acteurs publics ou privés décrits de manière hétérogène dans les données de marchés publics.</dd>
-                        <dt>Méthode</dt>
+                        <dt>Method</dt>
                         <dd>Normalisation des champs, appariement approximatif et exposition d'une API pour associer les agents à un SIRET unique.</dd>
-                        <dt>Livrable</dt>
+                        <dt>Output</dt>
                         <dd>API déployée et dépôts GitHub pour les versions locale et légère.</dd>
                     </dl>
                     <div class="tags">
+                        <span>public procurement</span>
                         <span>FastAPI</span>
-                        <span>Fuzzy matching</span>
-                        <span>Marchés publics</span>
+                        <span>matching</span>
                     </div>
                     <div class="card-actions">
                         <a href="https://siretizator.onrender.com/" target="_blank" rel="noreferrer">API</a>
@@ -181,11 +258,11 @@
             </div>
         </section>
 
-        <section class="section" id="publications">
+        <section class="section publications-section" id="publications">
             <div class="section-heading">
-                <p class="eyebrow">Recherche</p>
+                <p class="eyebrow">Research network</p>
                 <h2>Publications et communications</h2>
-                <p>Travaux autour des données publiques, du graph mining et de la détection d'anomalies.</p>
+                <p>Une constellation de travaux autour des données publiques, du graph mining et de la détection d'anomalies.</p>
             </div>
             <div class="publication-list">
                 <article class="publication-item">
@@ -194,6 +271,11 @@
                         <h3>Processing and consolidation of open data on public procurement in France (2015-2023)</h3>
                         <p class="publication-summary">Article de données consacré à la constitution de BeauAMP, une base tabulaire issue d'avis de marchés publics français publiés en ligne entre 2015 et 2023. Le jeu de données consolide environ un million de relations contractuelles et documente les contrats, les acheteurs publics et les entreprises attributaires.</p>
                         <p><strong>Auteurs :</strong> A. Deschamps, L. Potin</p>
+                        <div class="tags publication-tags">
+                            <span>open data</span>
+                            <span>public procurement</span>
+                            <span>data consolidation</span>
+                        </div>
                         <a href="https://www.sciencedirect.com/science/article/pii/S2352340925000095" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://github.com/AdrienDeschampsAU/BeauAMP" target="_blank" rel="noreferrer">Code</a>
                     </div>
@@ -204,6 +286,11 @@
                         <h3>Pattern-Based Graph Classification: Comparison of Quality Measures and Importance of Preprocessing</h3>
                         <p class="publication-summary">Article de graph classification qui compare 38 mesures de qualité utilisées pour sélectionner des motifs discriminants. Il propose aussi un prétraitement par clustering pour réduire les motifs à traiter tout en conservant une performance comparable et une meilleure lisibilité.</p>
                         <p><strong>Auteurs :</strong> L. Potin, R. Figueiredo, V. Labatut, C. Largeron</p>
+                        <div class="tags publication-tags">
+                            <span>graph mining</span>
+                            <span>pattern mining</span>
+                            <span>classification</span>
+                        </div>
                         <a href="https://dl.acm.org/doi/10.1145/3743143" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://github.com/CompNet/gpQualMeasComp" target="_blank" rel="noreferrer">Code</a>
                     </div>
@@ -214,6 +301,11 @@
                         <h3>FOPPA: an open database of French public procurement award notices from 2010-2020</h3>
                         <p class="publication-summary">Article de données présentant FOPPA, une base ouverte d'avis d'attribution de marchés publics français issus de TED sur la période 2010-2020. Le travail décrit les problèmes de qualité des données brutes et les traitements automatisés ou semi-automatisés utilisés pour produire une base exploitable.</p>
                         <p><strong>Auteurs :</strong> L. Potin, V. Labatut, P.H. Morand, C. Largeron</p>
+                        <div class="tags publication-tags">
+                            <span>open data</span>
+                            <span>public procurement</span>
+                            <span>data quality</span>
+                        </div>
                         <a href="https://www.nature.com/articles/s41597-023-02213-z" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://hal.science/hal-04101350v1/document" target="_blank" rel="noreferrer">PDF</a>
                         <a href="https://github.com/CompNet/FoppaInit" target="_blank" rel="noreferrer">Code</a>
@@ -225,6 +317,11 @@
                         <h3>Pattern mining for anomaly detection in graphs: Application to fraud in public procurement</h3>
                         <p class="publication-summary">Article proposant PANG, un framework supervisé et interprétable de détection d'anomalies dans des graphes attribués par extraction de motifs. L'application aux marchés publics vise à compenser les attributs manquants en exploitant les relations entre contrats et à identifier des motifs associés à des situations à risque.</p>
                         <p><strong>Auteurs :</strong> L. Potin, R. Figueiredo, V. Labatut, C. Largeron</p>
+                        <div class="tags publication-tags">
+                            <span>anomaly detection</span>
+                            <span>pattern mining</span>
+                            <span>public procurement</span>
+                        </div>
                         <a href="https://dl.acm.org/doi/10.1007/978-3-031-43427-3_5" target="_blank" rel="noreferrer">Article</a>
                         <a href="https://arxiv.org/pdf/2306.10857" target="_blank" rel="noreferrer">PDF</a>
                         <a href="https://github.com/CompNet/Pang/tree/main" target="_blank" rel="noreferrer">Code</a>
@@ -235,6 +332,11 @@
                     <div>
                         <h3>Communications: ROADEF, Decade, LIAvignon</h3>
                         <p>Présentations sur l'usage des graphes pour la détection de fraude et la découverte de connaissances dans les marchés publics.</p>
+                        <div class="tags publication-tags">
+                            <span>graph mining</span>
+                            <span>anomaly detection</span>
+                            <span>talks</span>
+                        </div>
                         <a href="https://roadef2023.sciencesconf.org/436926" target="_blank" rel="noreferrer">ROADEF</a>
                         <a href="https://hal.science/hal-04154490/document" target="_blank" rel="noreferrer">Decade</a>
                         <a href="https://hal.science/hal-03833237/document" target="_blank" rel="noreferrer">LIAvignon</a>
@@ -249,17 +351,19 @@
                 <h2>Discutons data science, graphes ou R&D appliquée.</h2>
             </div>
             <div class="contact-actions">
-                <a class="button button-primary" href="mailto:lucas.potin.data@gmail.com">Email</a>
+                <a class="button button-primary" href="mailto:lpotin888@gmail.com">Email</a>
                 <a class="button button-primary" href="https://www.linkedin.com/in/lucas-potin/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a class="button button-secondary" href="CV_POTIN_ENG.pdf" target="_blank" rel="noreferrer">CV anglais</a>
                 <a class="button button-secondary" href="https://github.com/LucasPotin98" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button button-secondary" href="https://scholar.google.fr/citations?user=1_SXGLMAAAAJ&hl=fr" target="_blank" rel="noreferrer">Scholar</a>
+                <a class="button button-secondary" href="CV_Lucas_POTIN.pdf" target="_blank" rel="noreferrer">CV FR</a>
+                <a class="button button-secondary" href="CV_POTIN_ENG.pdf" target="_blank" rel="noreferrer">CV EN</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <p>Lucas Potin</p>
-        <p>Data Scientist | Graph mining | Public procurement data</p>
+        <p>J'optimise des modèles de graphes — et parfois mon premier service.</p>
     </footer>
 
     <script src="script.js"></script>
