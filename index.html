@@ -34,7 +34,7 @@
         <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
             <a href="#about">À propos</a>
             <a href="#journey">Parcours</a>
-            <a href="#what-i-do">Ce que je fais</a>
+            <a href="#skills">Compétences</a>
             <a href="#projects">Projets</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
@@ -83,48 +83,58 @@
         </section>
 
 
-            <section class="section timeline-section" id="journey">
+            <section class="section journey-graph-section" id="journey">
                 <div class="section-heading">
                     <p class="eyebrow">Parcours</p>
                     <h2>En quelques étapes.</h2>
                 </div>
 
-                <div class="timeline" aria-label="Parcours de Lucas Potin">
-                    <article class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Aujourd’hui</span>
-                            <h3>Data Scientist @ GSE</h3>
-                            <p>Prévision, analytics et outils d’aide à la décision.</p>
+                <div class="journey-graph" aria-label="Parcours de Lucas Potin">
+                    <svg class="journey-edges" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <path class="journey-edge side-edge" d="M150 8 C118 12 88 16 78 24"></path>
+                        <path class="journey-edge side-edge" d="M150 8 C182 12 212 16 222 24"></path>
+                        <path class="journey-edge main-edge" d="M78 24 C82 39 116 47 150 55"></path>
+                        <path class="journey-edge main-edge" d="M222 24 C218 39 184 47 150 55"></path>
+                        <path class="journey-edge main-edge" d="M150 55 C150 68 150 79 150 90"></path>
+                    </svg>
+
+                    <article class="journey-node-card journey-root">
+                        <div class="journey-content">
+                            <span class="journey-date">2016–2020</span>
+                            <h3>Ingénieur en génie mathématique</h3>
+                            <p>Mathématiques appliquées, modélisation et informatique.</p>
                         </div>
                     </article>
 
-                    <article class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2021–2025</span>
-                            <h3>Doctorat en data mining</h3>
-                            <p>Analyse de graphes et détection d’anomalies dans les marchés publics.</p>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2020</span>
+                    <article class="journey-node-card journey-degree">
+                        <div class="journey-content">
+                            <span class="journey-date">2020</span>
                             <h3>M2 Science des données</h3>
                             <p>Machine learning, statistiques et projets data appliqués.</p>
                         </div>
                     </article>
 
-                    <article class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2016–2020</span>
-                            <h3>Ingénieur en génie mathématique</h3>
-                            <p>Mathématiques appliquées, modélisation et informatique.</p>
+                    <article class="journey-node-card journey-phd">
+                        <div class="journey-content">
+                            <span class="journey-date">2021–2025</span>
+                            <h3>Doctorat en data mining</h3>
+                            <p>Analyse de graphes et détection d’anomalies dans les marchés publics.</p>
                         </div>
                     </article>
+
+                    <article class="journey-node-card journey-current">
+                        <div class="journey-content">
+                            <span class="journey-date">Aujourd’hui</span>
+                            <h3>Data Scientist @ GSE</h3>
+                            <p>Prévision, analytics et outils d’aide à la décision.</p>
+                        </div>
+                    </article>
+
+                    <span class="journey-node journey-node-origin" aria-hidden="true"></span>
+                    <span class="journey-node journey-node-engineer" aria-hidden="true"></span>
+                    <span class="journey-node journey-node-degree" aria-hidden="true"></span>
+                    <span class="journey-node journey-node-phd" aria-hidden="true"></span>
+                    <span class="journey-node journey-node-current" aria-hidden="true"></span>
                 </div>
             </section>
 
