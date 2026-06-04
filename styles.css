@@ -159,7 +159,7 @@ a {
 .hero {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
     align-items: center;
     gap: 56px;
     min-height: auto;
@@ -319,23 +319,24 @@ h3 {
 }
 
 .hero-photo-card {
+    display: grid;
+    place-items: center;
     align-self: stretch;
-    min-height: 520px;
-    padding: 18px;
-    background:
-        radial-gradient(circle at 82% 12%, rgba(182, 122, 45, 0.2), transparent 10rem),
-        rgba(255, 250, 242, 0.78);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .hero-photo {
-    width: 100%;
-    height: min(62vh, 560px);
-    min-height: 420px;
+    width: min(100%, 500px);
+    aspect-ratio: 1;
+    height: auto;
+    min-height: 0;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 .hero-photo-caption {
@@ -1012,7 +1013,7 @@ h3 {
 
     .hero-photo-card {
         min-height: auto;
-        padding: 12px;
+        padding: 0;
     }
 
     .hero-photo {
@@ -1504,7 +1505,6 @@ h3 {
     border-color: var(--cognac);
 }
 
-.hero-photo-card,
 .skills-group,
 .work-card,
 .publication-card {
